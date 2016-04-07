@@ -28,7 +28,9 @@
         $(window).load(reset);
         $(window).resize(reset);
 
-        $(document).bind('DOMNodeInserted', reset);	// reset when new elements are inserted
+        $(document).load(function() {
+        	$(document).bind('DOMNodeInserted', reset);	// reset when new elements are inserted
+        });
 
         $(window).on("load resize scroll", function() {
           $('html').find('div[id*="edit-actions"]').each(function() {
