@@ -22,7 +22,6 @@
             buttonHeight = $this.height();        // gets the height of our button
 
             $this.width( buttonWidth );
-            $this.height( buttonHeight );
             $this.css('position','static');
           });
         }
