@@ -2,10 +2,6 @@
 	Drupal.behaviors.stickyButtons = {
     attach: function (context, settings) {
 
-    	$(document).bind('DOMNodeInserted', function(e) {
-		    console.log(e.target, ' was inserted');
-		});
-
       // if ($('div[id*="edit-actions"]').length) {        // if element exists
 
         var stickyTop;
@@ -31,6 +27,8 @@
         }
         $(window).load(reset);
         $(window).resize(reset);
+
+        $(document).bind('DOMNodeInserted', reset);	// reset when new elements are inserted
 
         $(window).on("load resize scroll", function() {
           $('html').find('div[id*="edit-actions"]').each(function() {
