@@ -2,6 +2,10 @@
 	Drupal.behaviors.stickyButtons = {
     attach: function (context, settings) {
 
+    	$(document).bind('DOMNodeInserted', function(e) {
+		    console.log(e.target, ' was inserted');
+		});
+
       // if ($('div[id*="edit-actions"]').length) {        // if element exists
 
         var stickyTop;
