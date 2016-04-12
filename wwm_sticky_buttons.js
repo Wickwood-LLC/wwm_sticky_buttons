@@ -1,7 +1,7 @@
 (function ($) {
 	Drupal.behaviors.stickyButtons = {
     attach: function (context, settings) {
-      $("#edit-actions").sticky();
+      // $("#edit-actions").sticky();
     }
   };
 }(jQuery));
