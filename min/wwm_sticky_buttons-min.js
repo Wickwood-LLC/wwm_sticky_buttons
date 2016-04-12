@@ -1,1 +1,1 @@
-!function($){Drupal.behaviors.stickyButtons={attach:function(t,i){$("#edit-actions").stick_in_parent()}}}(jQuery);
+!function($){Drupal.behaviors.stickyButtons={attach:function(t,i){$("#edit-actions").sticky()}}}(jQuery);
