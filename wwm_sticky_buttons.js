@@ -31,7 +31,7 @@
     
             $(window).scroll(function() {
 
-            	// $(document).bind('DOMNodeInserted', reset);	// reset when new elements are inserted
+            	$(document).bind('DOMNodeInserted', reset);	// reset when new elements are inserted
     
               $('html').find('div[id*="edit-actions"]').each(function() {
                 windowTop = $(window).scrollTop();    // tells how far our screen is currently from the top of the page
