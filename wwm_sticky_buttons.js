@@ -29,7 +29,7 @@
             $(window).load(reset);
             $(window).resize(reset);
     
-            $(window).on("scroll", function() {
+            $(window).scroll(function() {
 
             	// $(document).bind('DOMNodeInserted', reset);	// reset when new elements are inserted
     
@@ -42,13 +42,13 @@
                 console.log(stickyTop - (currentPosition - (buttonHeight)));
     
                 if (stickyTop > (currentPosition - (buttonHeight))) {    // if target element goes below the screen
-                  $this.css({ position: 'fixed', top: 'initial', bottom: 0, width: buttonWidth });   // stick it to the bottom
+                  $this.css({ position: 'fixed', top: 'initial', bottom: 0, width: buttonWidth, 'box-sizing': 'content-box' });   // stick it to the bottom
                 }
                 else if ((stickyTop - windowTop) < 0) {   // if target element goes above the screen
-                  $this.css({ position: 'fixed', top: '65px', bottom: 'initial', width: buttonWidth });   //stick it at the top
+                  $this.css({ position: 'fixed', top: '65px', bottom: 'initial', width: buttonWidth, 'box-sizing': 'content-box' });   //stick it at the top
                 }
                 else {
-                  $this.css({ position: 'static', width: buttonWidth });
+                  $this.css({ position: 'static', width: buttonWidth, 'box-sizing': 'content-box' });
                 }
               }); 
             }); 
