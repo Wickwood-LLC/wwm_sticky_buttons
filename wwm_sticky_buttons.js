@@ -29,7 +29,7 @@
             $(window).load(reset);
             $(window).resize(reset);
     
-            $(window).on("load resize scroll", function() {
+            $(window).on("scroll", function() {
 
             	// $(document).bind('DOMNodeInserted', reset);	// reset when new elements are inserted
     
