@@ -46,6 +46,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/sticky-kit.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sticky-kit.js",
+		"outputAbbreviatedPath": "\/min\/sticky-kit-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/wwm_sticky_buttons.js": {
 		"fileType": 64,
 		"ignore": 0,
