@@ -24,8 +24,6 @@
                 buttonHeight = $this.height();        // gets the height of our button
               });
             }
-            $(window).load(reset);
-            $(window).resize(reset);
     
             $(window).on("load resize scroll", function() {
             	
@@ -50,6 +48,9 @@
                 }
               }); 
             }); 
+
+            $(window).load(reset);
+            $(window).resize(reset);
         }
     }
   };
