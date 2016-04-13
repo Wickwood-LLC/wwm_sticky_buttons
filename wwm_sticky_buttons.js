@@ -27,9 +27,12 @@
 
             $(window).load(reset);
             $(window).resize(reset);
-            $(document).bind('DOMNodeInserted', reset);	// reset when new elements are inserted
     
             $(window).on("load resize scroll", function() {
+
+            	reset;
+
+            	$(document).bind('DOMNodeInserted', reset);	// reset when new elements are inserted
     
               $('html').find('div[id*="edit-actions"]').each(function() {
                 windowTop = $(window).scrollTop();    // tells how far our screen is currently from the top of the page
