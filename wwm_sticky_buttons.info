@@ -3,6 +3,4 @@ description = Custom module that implements a javascript to make edit actions st
 package = WWM
 core = 7.x
 version = 7.x-1.0
-files[] = wwm_sticky_buttons.module
-scripts[] = min/jquery.sticky-kit.min.js
-scripts[] = wwm_sticky_buttons.js
+
