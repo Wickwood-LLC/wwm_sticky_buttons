@@ -11,7 +11,7 @@ function wwm_sticky_buttons_form_alter(&$form, &$form_state, $form_id) {
     // Add CSS.
     // $form['#attached']['css'][] = $path . '/css/wwm_sticky_buttons.css';
     // Add JS.
-    $form['#attached']['js'][$path . '/sticky-kit.min.js'] = array(
+    $form['#attached']['js'][$path . '/min/sticky-kit.min.js'] = array(
       'type' => 'file',
       'weight' => 100,
     );

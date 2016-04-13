@@ -24,12 +24,12 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/min\/jquery.sticky-kit.min.js": {
+	"\/min\/sticky-kit.min.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/min\/jquery.sticky-kit.min.js",
-		"outputAbbreviatedPath": "\/min\/min\/jquery.sticky-kit.min-min.js",
+		"inputAbbreviatedPath": "\/min\/sticky-kit.min.js",
+		"outputAbbreviatedPath": "\/min\/min\/sticky-kit.min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
