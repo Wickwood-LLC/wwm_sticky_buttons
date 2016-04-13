@@ -14,14 +14,14 @@
             function reset() {
               $('div[id*="edit-actions"]').each(function (e) {
                 $this = $(this);
+
+                $this.css('position','static');
+                $this.width( buttonWidth );
                 
                 stickyTop = $this.offset().top;       // tells how far our target element is from the top of the page
                 windowHeight = $(window).height();    // measures the window height
                 buttonWidth = $this.width(); // gets the width of our button
                 buttonHeight = $this.height();        // gets the height of our button
-    
-                $this.width( buttonWidth );
-                $this.css('position','static');
               });
             }
             $(window).load(reset);
