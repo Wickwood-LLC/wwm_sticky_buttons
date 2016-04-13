@@ -1,1 +1,5 @@
 <?php
+
+drupal_add_js('jQuery(document).ready(function () { alert("Hello!"); });',
+    array('type' => 'inline', 'scope' => 'footer', 'weight' => 5)
+  );

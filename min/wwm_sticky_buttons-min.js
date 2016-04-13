@@ -1,1 +1,0 @@
-!function($){Drupal.behaviors.stickyButtons={attach:function(t,i){$("#edit-actions").pin()}}}(jQuery);
