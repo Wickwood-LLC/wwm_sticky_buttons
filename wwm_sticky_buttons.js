@@ -24,10 +24,12 @@
                 buttonHeight = $this.height();        // gets the height of our button
               });
             }
+
+            $(window).load(reset);
+            $(window).resize(reset);
+            $(document).bind('DOMNodeInserted', reset);	// reset when new elements are inserted
     
             $(window).on("load resize scroll", function() {
-            	
-            	$(document).bind('DOMNodeInserted', reset);	// reset when new elements are inserted
     
               $('html').find('div[id*="edit-actions"]').each(function() {
                 windowTop = $(window).scrollTop();    // tells how far our screen is currently from the top of the page
@@ -48,9 +50,6 @@
                 }
               }); 
             }); 
-
-            $(window).load(reset);
-            $(window).resize(reset);
         }
     }
   };
