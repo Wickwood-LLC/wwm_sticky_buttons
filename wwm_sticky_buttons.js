@@ -3,17 +3,35 @@
     attach: function (context, settings) {
 
         if (!!$('.my-sticky-element').offset()) { // make sure ".sticky" element exists
- 
-            var stickyTop = $('.my-sticky-element').offset().top; // returns number 
+
+            var $this = $('.my-sticky-element');
+            var stickyTop = $this.offset().top; // returns number 
+            var windowHeight = $(window).height();    // measures the window height
+            var buttonWidth = $this.width(); // gets the width of our button
+            var buttonHeight = $this.height();        // gets the height of our button
+            var windowTop;
+            var currentPosition;
          
             $(window).scroll(function(){ // scroll event     
-              var windowTop = $(window).scrollTop(); // returns number      
-              if (stickyTop < windowTop){
-                $('.my-sticky-element').css({ position: 'fixed', top: 0 });
-              }
-              else {
-                $('.my-sticky-element').css('position','static');
-              }     
+              windowTop = $(window).scrollTop(); // returns number
+              currentPosition = windowTop + windowHeight;    // tells how far our target element is from where our screen is currently
+
+              // if (stickyTop < windowTop){
+              //   $('.my-sticky-element').css({ position: 'fixed', top: 0 });
+              // }
+              // else {
+              //   $('.my-sticky-element').css('position','static');
+              // }
+
+                if (stickyTop > (currentPosition - (buttonHeight))) {    // if target element goes below the screen
+                  $this.css({ position: 'fixed', top: 'initial', bottom: 0, width: buttonWidth });   // stick it to the bottom
+                }
+                else if ((stickyTop - windowTop) < 0) {   // if target element goes above the screen
+                  $this.css({ position: 'fixed', top: '65px', bottom: 'initial', width: buttonWidth });   //stick it at the top
+                }
+                else {
+                  $this.css({ position: 'static', width: buttonWidth });
+                }     
             });     
         }
 
