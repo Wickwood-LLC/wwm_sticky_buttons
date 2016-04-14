@@ -28,7 +28,7 @@
             $(window).load(reset);
             $(window).resize(reset);
     
-            $(window).scroll(function() {
+            $(window).on("load reset scroll", function() {
     
                 windowTop = $(window).scrollTop();    // tells how far our screen is currently from the top of the page
                 currentPosition = windowTop + windowHeight;    // tells how far our target element is from where our screen is currently 
