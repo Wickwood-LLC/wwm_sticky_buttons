@@ -1,23 +1,9 @@
 (function ($) {
-	Drupal.behaviors.stickyButtons = {
+    Drupal.behaviors.stickyButtons = {
     attach: function (context, settings) {
 
-<<<<<<< HEAD
-        var $this = $('.my-sticky-element');
-
-        if (!!$this.offset()) {  // make sure ".my-sticky-element" element exists
-
-            $(window).on("load resize",function() {           // fire the script on load and resize
-              $this.css('position','static');  // this is to reset the position of the element whenever the page is updated with AJAX.
-
-              var stickyTop = $this.offset().top;
-              var windowHeight = $(window).height();
-              var buttonWidth = $this.width();
-              var windowTop = $(window).scrollTop(); // returns number  
-              var currentPosition = windowTop + windowHeight;
-=======
         if ($(window).width() > 480) {
-    		var stickyTop;
+            var stickyTop;
             var windowHeight;
             var buttonWidth;
             var buttonHeight;
@@ -35,37 +21,33 @@
 
                 $this.width( buttonWidth );
             }
->>>>>>> eed984c... Added sticky buttons class and improve module based on sticky edit actions
 
-              console.log(buttonWidth);
+            $(window).load(reset);
+            $(window).resize(reset);
+    
+            $(window).scroll(function() {
 
-              // $this.css('width', buttonWidth);      // reset button width
-
-              // if (stickyTop > currentPosition) {
-              //   $this.css({ position: 'fixed', top: 'initial', bottom: 0, width: buttonWidth });
-              // }
-              // else if ((stickyTop - windowTop) < 0) {
-              //   $this.css({ position: 'fixed', top: 0, bottom: 'initial', width: buttonWidth });
-              // }
-              // else {
-              //   $this.css('position','static');
-              // }
-        
-              $(window).scroll(function(){ // scroll event 
-                var windowTop = $(window).scrollTop(); // returns number  
-                var currentPosition = windowTop + windowHeight;
-        
-                if (stickyTop > currentPosition) {
-                  $this.css({ position: 'fixed', top: 'initial', bottom: 0, width: buttonWidth });
+                $(document).bind('DOMNodeInserted', reset); // reset when new elements are inserted
+    
+              $('html').find('div[id*="edit-actions"]').each(function() {
+                windowTop = $(window).scrollTop();    // tells how far our screen is currently from the top of the page
+                currentPosition = windowTop + windowHeight;    // tells how far our target element is from where our screen is currently 
+    
+                console.log(stickyTop);
+                console.log(currentPosition - buttonHeight);
+                console.log(stickyTop - (currentPosition - (buttonHeight)));
+    
+                if (stickyTop > (currentPosition - (buttonHeight))) {    // if target element goes below the screen
+                  $this.css({ position: 'fixed', top: 'initial', bottom: 0, width: buttonWidth, 'box-sizing': 'content-box' });   // stick it to the bottom
                 }
-                else if ((stickyTop - windowTop) < 0) {
-                  $this.css({ position: 'fixed', top: 0, bottom: 'initial', width: buttonWidth });
+                else if ((stickyTop - windowTop) < 0) {   // if target element goes above the screen
+                  $this.css({ position: 'fixed', top: '65px', bottom: 'initial', width: buttonWidth, 'box-sizing': 'content-box' });   //stick it at the top
                 }
                 else {
-                  $this.css('position','static');
+                  $this.css({ position: 'static', width: buttonWidth, 'box-sizing': 'content-box' });
                 }
-              });
-            });
+              }); 
+            }); 
         }
     }
   };
