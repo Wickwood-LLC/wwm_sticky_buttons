@@ -15,17 +15,19 @@
               var windowTop = $(window).scrollTop(); // returns number  
               var currentPosition = windowTop + windowHeight;
 
-              $this.css('width', buttonWidth);      // reset button width
+              console.log(buttonWidth);
 
-              if (stickyTop > currentPosition) {
-                $this.css({ position: 'fixed', top: 'initial', bottom: 0, width: buttonWidth });
-              }
-              else if ((stickyTop - windowTop) < 0) {
-                $this.css({ position: 'fixed', top: 0, bottom: 'initial', width: buttonWidth });
-              }
-              else {
-                $this.css('position','static');
-              }
+              // $this.css('width', buttonWidth);      // reset button width
+
+              // if (stickyTop > currentPosition) {
+              //   $this.css({ position: 'fixed', top: 'initial', bottom: 0, width: buttonWidth });
+              // }
+              // else if ((stickyTop - windowTop) < 0) {
+              //   $this.css({ position: 'fixed', top: 0, bottom: 'initial', width: buttonWidth });
+              // }
+              // else {
+              //   $this.css('position','static');
+              // }
         
               $(window).scroll(function(){ // scroll event 
                 var windowTop = $(window).scrollTop(); // returns number  
