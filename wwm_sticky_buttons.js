@@ -2,6 +2,7 @@
 	Drupal.behaviors.stickyButtons = {
     attach: function (context, settings) {
 
+<<<<<<< HEAD
         var $this = $('.my-sticky-element');
 
         if (!!$this.offset()) {  // make sure ".my-sticky-element" element exists
@@ -14,6 +15,27 @@
               var buttonWidth = $this.width();
               var windowTop = $(window).scrollTop(); // returns number  
               var currentPosition = windowTop + windowHeight;
+=======
+        if ($(window).width() > 480) {
+    		var stickyTop;
+            var windowHeight;
+            var buttonWidth;
+            var buttonHeight;
+            var windowTop;
+            var currentPosition;
+            var $this = $('.my-sticky-element');
+    
+            function reset() {
+                $this.css('position','static');
+                
+                stickyTop = $this.offset().top;       // tells how far our target element is from the top of the page
+                windowHeight = $(window).height();    // measures the window height
+                buttonWidth = $this.width(); // gets the width of our button
+                buttonHeight = $this.height();        // gets the height of our button
+
+                $this.width( buttonWidth );
+            }
+>>>>>>> eed984c... Added sticky buttons class and improve module based on sticky edit actions
 
               console.log(buttonWidth);
 
