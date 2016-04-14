@@ -12,7 +12,7 @@
             var $this = $('.my-sticky-element');
     
             function reset() {
-                $this.css('position','static');
+                $this.css({position: 'static', width: 'initial'});
                 
                 stickyTop = $this.offset().top;       // tells how far our target element is from the top of the page
                 windowHeight = $(window).height();    // measures the window height
