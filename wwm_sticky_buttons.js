@@ -9,12 +9,9 @@
             var buttonHeight;
             var windowTop;
             var currentPosition;
-            var $this;
+            var $this = $('.my-sticky-element');
     
             function reset() {
-              $('div[id*="edit-actions"]').each(function (e) {
-                $this = $(this);
-
                 $this.css('position','static');
                 
                 stickyTop = $this.offset().top;       // tells how far our target element is from the top of the page
@@ -23,7 +20,6 @@
                 buttonHeight = $this.height();        // gets the height of our button
 
                 $this.width( buttonWidth );
-              });
             }
 
             $(window).load(reset);
