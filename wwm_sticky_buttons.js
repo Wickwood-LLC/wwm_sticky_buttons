@@ -29,8 +29,6 @@
             $(window).resize(reset);
     
             $(window).scroll(function() {
-
-                $(document).bind('DOMNodeInserted', reset); // reset when new elements are inserted
     
                 windowTop = $(window).scrollTop();    // tells how far our screen is currently from the top of the page
                 currentPosition = windowTop + windowHeight;    // tells how far our target element is from where our screen is currently 
@@ -49,6 +47,8 @@
                   $this.css({ position: 'static', width: buttonWidth, 'box-sizing': 'content-box' });
                 }
             }); 
+
+            $(document).bind('DOMNodeInserted', reset); // reset when new elements are inserted
         }
     }
   };
