@@ -22,11 +22,20 @@
                 $this.width( buttonWidth );
             }
 
-            $(window).on("load resize", reset);
+            //$(window).on("load resize", reset);
     
-            $(window).scroll(function() {
+            $(window).on("load resize scroll", function() {
 
             	$(document).bind('DOMNodeInserted', reset);	// reset when new elements are inserted
+
+                $this.css('position','static');
+                
+                stickyTop = $this.offset().top;       // tells how far our target element is from the top of the page
+                windowHeight = $(window).height();    // measures the window height
+                buttonWidth = $this.width(); // gets the width of our button
+                buttonHeight = $this.height();        // gets the height of our button
+
+                $this.width( buttonWidth );
     
                 windowTop = $(window).scrollTop();    // tells how far our screen is currently from the top of the page
                 currentPosition = windowTop + windowHeight;    // tells how far our target element is from where our screen is currently 
