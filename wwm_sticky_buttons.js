@@ -2,7 +2,7 @@
     Drupal.behaviors.stickyButtons = {
     attach: function (context, settings) {
 
-        if ($(window).width() > 480) {
+        if (($(window).width() > 480) && (!!$('.my-sticky-element').offset())) {
             var stickyTop;
             var windowHeight;
             var buttonWidth;
