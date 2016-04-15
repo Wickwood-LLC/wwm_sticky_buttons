@@ -20,9 +20,6 @@
                 buttonHeight = $this.height();        // gets the height of our button
 
                 $this.width( buttonWidth );
-
-                console.log(buttonWidth);
-                console.log('It works!')
             }
 
             $(window).load(reset);
@@ -33,9 +30,9 @@
                 windowTop = $(window).scrollTop();    // tells how far our screen is currently from the top of the page
                 currentPosition = windowTop + windowHeight;    // tells how far our target element is from where our screen is currently 
     
-                console.log(stickyTop);
-                console.log(currentPosition - buttonHeight);
-                console.log(stickyTop - (currentPosition - (buttonHeight)));
+                // console.log(stickyTop);
+                // console.log(currentPosition - buttonHeight);
+                // console.log(stickyTop - (currentPosition - (buttonHeight)));
     
                 if (stickyTop > (currentPosition - (buttonHeight))) {    // if target element goes below the screen
                   $this.css({ position: 'fixed', top: 'initial', bottom: 0, width: buttonWidth, 'box-sizing': 'content-box' });   // stick it to the bottom
