@@ -2,5 +2,4 @@ name = WWM Sticky Buttons
 description = Custom module that implements a javascript to make edit actions sticky.
 package = WWM
 core = 7.x
-version = 7.x-1.0
-
+version = 7.x-1.x-sticky-kit
