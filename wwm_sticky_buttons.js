@@ -24,7 +24,8 @@
                 $this.width( buttonWidth );
             }
 
-            $(window).once("load resize", reset);
+            $(window).off("load resize");
+            $(window).on("load resize", reset);
     
             $(window).on("load reset scroll", function() {
     
