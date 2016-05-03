@@ -16,16 +16,15 @@
                 
                 stickyTop = $this.offset().top;       // tells how far our target element is from the top of the page
                 windowHeight = $(window).height();    // measures the window height
-                buttonWidth = $this.outerWidth(); // gets the width of our button
+                buttonWidth = $this.width(); // gets the width of our button
                 buttonHeight = $this.height();        // gets the height of our button
 
                 console.log(buttonWidth);
 
-                $this.outerWidth( buttonWidth );
+                $this.width( buttonWidth );
             }
 
-            $(window).load(reset);
-            $(window).resize(reset);
+            $(window).one("load resize", reset);
     
             $(window).on("load reset scroll", function() {
     
