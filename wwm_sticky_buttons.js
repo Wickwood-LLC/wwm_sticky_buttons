@@ -11,21 +11,7 @@
             var currentPosition;
             var $this = $('.my-sticky-element');
     
-            // function reset() {
-            //     $this.css({position: 'static', width: 'initial'});
-                
-            //     stickyTop = $this.offset().top;       // tells how far our target element is from the top of the page
-            //     windowHeight = $(window).height();    // measures the window height
-            //     buttonWidth = $this.width(); // gets the width of our button
-            //     buttonHeight = $this.height();        // gets the height of our button
-
-            //     console.log(buttonWidth);
-
-            //     $this.width( buttonWidth );
-            // }
-
-            $(window).off("load");
-            $(window).on("load", function() {
+            function reset() {
                 $this.css({position: 'static', width: 'initial'});
                 
                 stickyTop = $this.offset().top;       // tells how far our target element is from the top of the page
@@ -36,7 +22,10 @@
                 console.log(buttonWidth);
 
                 $this.width( buttonWidth );
-            });
+            }
+
+            $(window).off("load resize");
+            $(window).on("load resize", reset);
     
             $(window).on("load resize scroll", function() {
     
