@@ -21,7 +21,7 @@
 
                 console.log(buttonWidth);
 
-                $this.width( buttonWidth );
+                $this.outerWidth( buttonWidth );
             }
 
             $(window).load(reset);
