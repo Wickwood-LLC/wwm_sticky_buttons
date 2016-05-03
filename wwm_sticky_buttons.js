@@ -19,7 +19,7 @@
                 buttonWidth = $this.width(); // gets the width of our button
                 buttonHeight = $this.height();        // gets the height of our button
 
-                dpm(buttonWidth);
+                console.log(buttonWidth);
 
                 $this.width( buttonWidth );
             }
