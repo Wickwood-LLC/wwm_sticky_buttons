@@ -19,13 +19,13 @@
                 buttonWidth = $this.width(); // gets the width of our button
                 buttonHeight = $this.height();        // gets the height of our button
 
-                console.log(buttonWidth);
+                alert(buttonWidth);
 
                 $this.width( buttonWidth );
             }
 
-            $(document).ready(reset);
-            // $(window).resize(reset);
+            $(window).load(reset);
+            $(window).resize(reset);
     
             $(window).on("load reset scroll", function() {
     
