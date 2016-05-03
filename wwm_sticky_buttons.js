@@ -24,10 +24,10 @@
                 $this.innerWidth( buttonWidth );
             }
 
-            $(window).off("load resize");
-            $(window).on("load resize", reset);
+            // $(window).off("load resize");
+            $(window).once("load resize", reset);
     
-            $(window).on("load resize scroll", function() {
+            $(window).once("load resize scroll", function() {
     
                 windowTop = $(window).scrollTop();    // tells how far our screen is currently from the top of the page
                 currentPosition = windowTop + windowHeight;    // tells how far our target element is from where our screen is currently 
