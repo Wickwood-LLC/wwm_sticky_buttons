@@ -24,10 +24,10 @@
                 $this.width( buttonWidth );
             }
 
-            $(window).off("load resize");
+            // $(window).off("load resize");
             $(window).on("load resize", reset);
     
-            $(window).off("load resize scroll");
+            // $(window).off("load resize scroll");
             $(window).on("load resize scroll", function() {
     
                 windowTop = $(window).scrollTop();    // tells how far our screen is currently from the top of the page
