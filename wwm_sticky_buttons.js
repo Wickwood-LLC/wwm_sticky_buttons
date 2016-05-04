@@ -16,19 +16,19 @@
                 
                 stickyTop = $this.offset().top;       // tells how far our target element is from the top of the page
                 windowHeight = $(window).height();    // measures the window height
-                buttonWidth = $this.outerWidth(); // gets the width of our button
+                buttonWidth = $this.width(); // gets the width of our button
                 buttonHeight = $this.height();        // gets the height of our button
 
                 console.log(buttonWidth);
 
-                $this.innerWidth( buttonWidth );
+                $this.width( buttonWidth );
             }
 
             // $(window).off("load resize");
-            $(window).one("load resize", reset);
+            $(window).once("load resize", reset);
     
             // $(window).off("load resize scroll");
-            $(window).one("load resize scroll", function() {
+            $(window).once("load resize scroll", function() {
     
                 windowTop = $(window).scrollTop();    // tells how far our screen is currently from the top of the page
                 currentPosition = windowTop + windowHeight;    // tells how far our target element is from where our screen is currently 
