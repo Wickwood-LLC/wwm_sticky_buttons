@@ -25,20 +25,10 @@
             }
 
             // $(window).off("load resize");
-            $(window).on("load resize", function() {
-                $this.css({position: 'static', width: 'initial'});
-                
-                stickyTop = $this.offset().top;       // tells how far our target element is from the top of the page
-                windowHeight = $(window).height();    // measures the window height
-                buttonWidth = $this.outerWidth(); // gets the width of our button
-                buttonHeight = $this.height();        // gets the height of our button
-
-                console.log(buttonWidth);
-
-                $this.innerWidth( buttonWidth );
-            });
+            $(window).one("load resize", reset);
     
-            $(window).on("load resize scroll", function() {
+            // $(window).off("load resize scroll");
+            $(window).one("load resize scroll", function() {
     
                 windowTop = $(window).scrollTop();    // tells how far our screen is currently from the top of the page
                 currentPosition = windowTop + windowHeight;    // tells how far our target element is from where our screen is currently 
