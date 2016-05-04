@@ -5,7 +5,7 @@
         var $this = $('.my-sticky-element');
         var stickyTop;
         var windowHeight;
-        var buttonWidth = $this.css('width', 'inherit');
+        var buttonWidth = $('.my-sticky-element').css('width', 'inherit');
         var buttonHeight;
         var windowTop;
         var currentPosition;
