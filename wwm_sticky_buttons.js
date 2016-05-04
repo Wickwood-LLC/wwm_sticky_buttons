@@ -24,12 +24,7 @@
                 $this.width( buttonWidth );
             }
 
-            // $(window).off("load resize");
-            $(window).on("load resize", reset);
-    
-            // $(window).off("load resize scroll");
-            $(window).on("load resize scroll", function() {
-    
+            function scrollSticky() {    
                 windowTop = $(window).scrollTop();    // tells how far our screen is currently from the top of the page
                 currentPosition = windowTop + windowHeight;    // tells how far our target element is from where our screen is currently 
     
@@ -46,7 +41,15 @@
                 else {
                   $this.css({ position: 'static', width: buttonWidth, 'box-sizing': 'content-box' });
                 }
-            }); 
+            }
+
+            // $(window).off("load resize");
+            $(window).one("load resize", reset);
+    
+            // $(window).off("load resize scroll");
+            $(window).on("load resize", scrollSticky); 
+
+            $(window).scroll(scrollSticky);
 
             // $(document).bind('DOMNodeInserted', reset); // reset when new elements are inserted
         }
