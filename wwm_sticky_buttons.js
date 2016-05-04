@@ -44,7 +44,7 @@
             }
 
             // $(window).off("load resize");
-            $(window).one("load resize", reset);
+            $(window).on("load resize", reset);
     
             // $(window).off("load resize scroll");
             $(window).on("load resize", scrollSticky); 
