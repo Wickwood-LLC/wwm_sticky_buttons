@@ -10,6 +10,8 @@
         var windowTop;
         var currentPosition;
 
+        console.log(buttonWidth);
+
         function reset() {
             $this.css({position: 'static', width: 'initial'});
             
