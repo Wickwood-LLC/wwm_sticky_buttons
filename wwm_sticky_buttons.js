@@ -2,13 +2,13 @@
     Drupal.behaviors.stickyButtons = {
     attach: function (context, settings) {
 
+        var $this = $('.my-sticky-element');
         var stickyTop;
         var windowHeight;
-        var buttonWidth;
+        var buttonWidth = $this.css('width', 'inherit');
         var buttonHeight;
         var windowTop;
         var currentPosition;
-        var $this = $('.my-sticky-element');
 
         function reset() {
             $this.css({position: 'static', width: 'initial'});
