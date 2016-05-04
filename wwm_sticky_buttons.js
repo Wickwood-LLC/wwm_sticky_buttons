@@ -10,10 +10,6 @@
         var windowTop;
         var currentPosition;
 
-        buttonWidth = $('.my-sticky-element').css('width', 'inherit');
-
-        console.log(buttonWidth);
-
         function reset() {
             $this.css({position: 'static', width: 'initial'});
             
