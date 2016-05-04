@@ -48,7 +48,7 @@
                 }
             }); 
 
-            $(document).bind('DOMNodeInserted', reset); // reset when new elements are inserted
+            // $(document).bind('DOMNodeInserted', reset); // reset when new elements are inserted
         }
     }
   };
