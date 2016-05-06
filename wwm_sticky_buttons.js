@@ -5,7 +5,7 @@
         var $this = $('.my-sticky-element');
         var stickyTop;
         var windowHeight;
-        var buttonWidth;
+        var buttonWidth = $this.width('inherit');
         var buttonHeight;
         var windowTop;
         var currentPosition;
@@ -43,12 +43,8 @@
         }
 
         if (($(window).width() > 480) && (!!$('.my-sticky-element').offset())) {
-            // $(window).off("load resize");
-            $(window).on("load resize", reset);
-    
-            // $(window).off("load resize scroll");
-            $(window).on("load resize scroll", scrollSticky); 
-
+            $(window).on("load resize", reset);    
+            $(window).on("load resize scroll", scrollSticky);
             $(document).load(function(){
                 $(this).bind('DOMNodeInserted', reset); // reset when new elements are inserted
             });
