@@ -5,13 +5,15 @@
         var $this = $('.my-sticky-element');
         var stickyTop;
         var windowHeight;
-        var buttonWidth = $this.width('inherit');
+        var buttonWidth;
         var buttonHeight;
         var windowTop;
         var currentPosition;
 
         function reset() {
             $this.css({position: 'static', width: 'initial'});
+
+            buttonWidth = $this.width('inherit');
             
             stickyTop = $this.offset().top;       // tells how far our target element is from the top of the page
             windowHeight = $(window).height();    // measures the window height
