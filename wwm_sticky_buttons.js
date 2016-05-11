@@ -44,7 +44,7 @@
             }
         }
 
-        if (($(window).width() > 480) && (!!$('.my-sticky-element').offset()) && (!!$("body").hasClass("page-admin-structure-views"))) {
+        if (($(window).width() > 480) && (!!$('.my-sticky-element').offset()) && (!$("body").hasClass("page-admin-structure-views"))) {
             $(window).on("load resize", reset);    
             $(window).on("load resize scroll", scrollSticky);
             $(document).load(function(){
