@@ -13,9 +13,9 @@
         function reset() {
             $this.css({position: 'static', width: 'initial'});
 
-            if (detectIEregexp.test(navigator.userAgent)){ //if some form of IE
-                buttonWidth = $this.width('inherit');
-            }
+            // if (detectIEregexp.test(navigator.userAgent)){ //if some form of IE
+            //     buttonWidth = $this.width('inherit');
+            // }
             
             stickyTop = $this.offset().top;       // tells how far our target element is from the top of the page
             windowHeight = $(window).height();    // measures the window height
@@ -48,7 +48,7 @@
 
         if (($(window).width() > 480) && (!!$('.my-sticky-element').offset()) && (!$("body").hasClass("page-admin-structure-views"))) {
             $(window).on("load resize", reset);    
-            $(window).on("load resize scroll", scrollSticky);
+            $(window).on("resize scroll", scrollSticky);
             // $(document).load(function(){
                 $(document).bind('DOMNodeInserted', reset); // reset when new elements are inserted
             // });
