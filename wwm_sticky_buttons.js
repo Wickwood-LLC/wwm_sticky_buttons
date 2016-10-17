@@ -13,9 +13,9 @@
         function reset() {
             $this.css({position: 'static', width: 'initial'});
 
-            if (detectIEregexp.test(navigator.userAgent)){ //if some form of IE
-                buttonWidth = $this.width('inherit');
-            }
+            // if (detectIEregexp.test(navigator.userAgent)){ //if some form of IE
+            //     buttonWidth = $this.width('inherit');
+            // }
             
             stickyTop = $this.offset().top;       // tells how far our target element is from the top of the page
             windowHeight = $(window).height();    // measures the window height
