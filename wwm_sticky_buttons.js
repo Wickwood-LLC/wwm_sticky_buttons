@@ -45,8 +45,10 @@
             }
         }
 
+        reset;
+
         if (($(window).width() > 480) && (!!$('.my-sticky-element').offset()) && (!$("body").hasClass("page-admin-structure-views"))) {
-            $(window).on("load resize", reset);
+            // $(window).on("load resize", reset);
             $(window).on("load resize scroll", scrollSticky);
             // $(document).load(function(){
                 // $(document).bind('DOMNodeInserted', reset); // reset when new elements are inserted
