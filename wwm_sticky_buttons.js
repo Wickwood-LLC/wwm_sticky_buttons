@@ -11,10 +11,6 @@
         var currentPosition;
 
         function reset() {
-            $this.width( buttonWidth );
-            // $this.css({position: 'static', top: 'initial', bottom: 'initial', width: buttonWidth, 'box-sizing': 'content-box'});
-            $this.css({width: buttonWidth});
-
             // if (detectIEregexp.test(navigator.userAgent)){ //if some form of IE
             //     buttonWidth = $this.width('inherit');
             // }
@@ -25,6 +21,9 @@
             buttonHeight = $this.height();        // gets the height of our button
 
             // console.log(buttonWidth);
+            $this.width( buttonWidth );
+            // $this.css({position: 'static', top: 'initial', bottom: 'initial', width: buttonWidth, 'box-sizing': 'content-box'});
+            $this.css({width: buttonWidth});
         }
 
         function scrollSticky() {    
