@@ -10,6 +10,13 @@
         var windowTop;
         var currentPosition;
 
+        stickyTop = $this.offset().top;       // tells how far our target element is from the top of the page
+        windowHeight = $(window).height();    // measures the window height
+        buttonWidth = $this.width(); // gets the width of our button
+        buttonHeight = $this.height();        // gets the height of our button
+        $this.width( buttonWidth );
+        $this.css({position: 'static', top: 'initial', bottom: 'initial', width: buttonWidth, 'box-sizing': 'content-box'});
+
         function reset() {
             // if (detectIEregexp.test(navigator.userAgent)){ //if some form of IE
             //     buttonWidth = $this.width('inherit');
@@ -45,7 +52,7 @@
             }
         }
 
-        reset();
+        // reset();
 
         if (($(window).width() > 480) && (!!$('.my-sticky-element').offset()) && (!$("body").hasClass("page-admin-structure-views"))) {
             // $(window).on("load resize", reset);
