@@ -15,7 +15,7 @@
         buttonWidth = $this.width(); // gets the width of our button
         buttonHeight = $this.height();        // gets the height of our button
         $this.width( buttonWidth );
-        $this.css({position: 'static', top: 'initial', bottom: 'initial', width: buttonWidth, 'box-sizing': 'content-box'});
+        // $this.css({position: 'static', top: 'initial', bottom: 'initial', width: buttonWidth, 'box-sizing': 'content-box'});
 
         function reset() {
             // if (detectIEregexp.test(navigator.userAgent)){ //if some form of IE
