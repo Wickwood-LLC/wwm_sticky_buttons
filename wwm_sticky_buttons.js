@@ -65,7 +65,7 @@
 
         if (($(window).width() > 480) && (!!$('.my-sticky-element').offset()) && (!$("body").hasClass("page-admin-structure-views"))) {
             $(window).on("load resize", reset);    
-            $(window).scroll(scrollSticky);
+            $(window).scroll(reset);
             // $(document).load(function(){
                 $(this).bind('DOMNodeInserted', reset); // reset when new elements are inserted
             // });
