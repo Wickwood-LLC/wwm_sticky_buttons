@@ -22,7 +22,7 @@
             buttonWidth = $this.width(); // gets the width of our button
             buttonHeight = $this.height();        // gets the height of our button
 
-            console.log(buttonWidth);
+            // console.log(buttonWidth);
 
             $this.width( buttonWidth );
 
@@ -66,9 +66,9 @@
         if (($(window).width() > 480) && (!!$('.my-sticky-element').offset()) && (!$("body").hasClass("page-admin-structure-views"))) {
             $(window).on("load resize", reset);    
             $(window).scroll(scrollSticky);
-            $(document).load(function(){
-                $(this).bind('DOMNodeInserted', reset); // reset when new elements are inserted
-            });
+            // $(document).load(function(){
+            //     $(this).bind('DOMNodeInserted', reset); // reset when new elements are inserted
+            // });
         }
     }
   };
