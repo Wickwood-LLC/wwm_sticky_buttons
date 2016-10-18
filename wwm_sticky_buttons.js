@@ -11,7 +11,7 @@
         var currentPosition;
 
         function reset() {
-            $this.css({position: 'static', top: 'initial', bottom: 'initial', width: buttonWidth, 'box-sizing': 'content-box'});
+            // $this.css({position: 'static', top: 'initial', bottom: 'initial', width: buttonWidth, 'box-sizing': 'content-box'});
 
             // if (detectIEregexp.test(navigator.userAgent)){ //if some form of IE
             //     buttonWidth = $this.width('inherit');
