@@ -22,8 +22,8 @@
 
             // console.log(buttonWidth);
             $this.width( buttonWidth );
-            // $this.css({position: 'static', top: 'initial', bottom: 'initial', width: buttonWidth, 'box-sizing': 'content-box'});
-            $this.css({width: buttonWidth});
+            $this.css({position: 'static', top: 'initial', bottom: 'initial', width: buttonWidth, 'box-sizing': 'content-box'});
+            // $this.css({width: buttonWidth});
         }
 
         function scrollSticky() {    
