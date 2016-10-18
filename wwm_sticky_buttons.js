@@ -49,7 +49,7 @@
             // $(window).on("load resize", reset);
             $(window).on("load resize scroll", scrollSticky);
             // $(document).load(function(){
-                $(document).bind('DOMNodeInserted', reset); // reset when new elements are inserted
+                // $(document).bind('DOMNodeInserted', reset); // reset when new elements are inserted
             // });
         }
     }
