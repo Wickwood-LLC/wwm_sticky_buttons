@@ -11,7 +11,7 @@
         var currentPosition;
 
         function reset() {
-            $this.css({position: 'static', width: 'initial'});
+            $this.css({position: 'static', top: 'initial', bottom: 'initial', width: buttonWidth, 'box-sizing': 'content-box'});
 
             // if (detectIEregexp.test(navigator.userAgent)){ //if some form of IE
             //     buttonWidth = $this.width('inherit');
@@ -42,7 +42,7 @@
               $this.css({ position: 'fixed', top: '65px', bottom: 'initial', width: buttonWidth, 'box-sizing': 'content-box' });   //stick it at the top
             }
             else {
-              $this.css({ position: 'static', width: buttonWidth, 'box-sizing': 'content-box' });
+              $this.css({ position: 'static', top: 'initial', bottom: 'initial', width: buttonWidth, 'box-sizing': 'content-box' });
             }
         }
 
